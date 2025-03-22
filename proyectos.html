@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos | Daniel Garrido | Bot Developer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Nueva fuente: Inter -->
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif; /* Fuente moderna */
+      background: linear-gradient(45deg, #FF6A95, #9D4EDD, #4A90E2, #50E3C2); /* Fondo animado con gradiente */
+      background-size: 400% 400%;
+      animation: gradientBackground 10s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Animación para el fondo */
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    header {
+      padding: 120px 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 4.5em;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      animation: textAnimation 2s ease-in-out forwards;
+    }
+
+    header p {
+      font-size: 1.3em;
+      margin-top: 10px;
+      color: #ddd;
+    }
+
+    /* Animación de texto para el header */
+    @keyframes textAnimation {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .project-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .project-section h2 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      color: #ff7f50;
+      animation: textSlideIn 1.5s ease-out;
+    }
+
+    /* Animación de texto para los títulos de proyectos */
+    @keyframes textSlideIn {
+      0% {
+        transform: translateX(-30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .project-card {
+      background: #1e1e2f;
+      padding: 30px;
+      border-radius: 15px;
+      flex: 1;
+      min-width: 250px;
+      max-width: 350px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    }
+
+    .project-card h3 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      font-family: 'Inter', sans-serif;
+      color: #00ffe7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    }
+
+    .project-card p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    .project-card .info {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      font-size: 1.2em;
+      color: #ff7f50;
+      font-weight: bold;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+
+    .project-card .info span {
+      color: #00ffe7;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>Mis Proyectos</h1>
+    <p>Explora algunos de los bots que he creado para diferentes comunidades y servidores, ¡con funcionalidades increíbles!</p>
+  </header>
+
+  <section class="project-section">
+    <h2>Proyectos Destacados</h2>
+
+    <!-- Proyecto 1 -->
+    <div class="project">
+      <div class="project-card">
+        <h3>Spain RP</h3>
+        <p>Bot 24/7 con base de datos MySQL. Incluye comandos de roleplay y funcionalidades avanzadas para la gestión del servidor, roles de jugadores y eventos especiales. Personalizable para todas las necesidades del servidor.</p>
+        <div class="info">Comandos de <span>Roleplay</span></div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="project-card">
+        <h3>Barcelona RP</h3>
+        <p>Bot especializado en servidores de roleplay. Con comandos exclusivos de Barcelona RP y personalización de roles y eventos. Integración completa con la base de datos para asegurar el flujo de interacción y gestión de usuarios.</p>
+        <div class="info">Sistema de <span>Eventos</span></div>
+      </div>
+    </div>
+
+    <!-- Proyecto 3 -->
+    <div class="project">
+      <div class="project-card">
+        <h3>New York RP</h3>
+        <p>Bot de roleplay avanzado con integración web para visualizar estadísticas en tiempo real. Diseñado para servidores de New York RP, con herramientas de moderación y estadísticas de jugadores, además de comandos personalizados.</p>
+        <div class="info">Comandos <span>Avanzados</span></div>
+      </div>
+
+      <!-- Proyecto 4 -->
+      <div class="project-card">
+        <h3>Atlántica Virtual</h3>
+        <p>Bot para MSFM en IVAO que permite obtener METAR y otras informaciones meteorológicas en tiempo real. Herramientas para pilotos virtuales con integración avanzada y funciones de control de vuelo.</p>
+        <div class="info">Integración <span>MSFM</span></div>
+      </div>
+    </div>
+
+    <!-- Proyecto 5 -->
+    <div class="project">
+      <div class="project-card">
+        <h3>Málaga Spanish</h3>
+        <p>Bot diseñado específicamente para la comunidad de Málaga. Incluye comandos de gestión de roles, moderación avanzada y eventos personalizados para facilitar la interacción dentro del servidor.</p>
+        <div class="info">Comandos de <span>Moderación</span></div>
+      </div>
+
+      <!-- Proyecto 6 -->
+      <div class="project-card">
+        <h3>ShieldVerify</h3>
+        <p>Bot que utiliza la API de Roblox para verificar usuarios dentro del servidor. Completamente seguro, fácil de integrar y personalizable según las necesidades de verificación de cada comunidad.</p>
+        <div class="info">Verificación <span>Roblox</span></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5, "random": true },
+        "size": { "value": 3, "random": true },
+        "move": { "enable": true, "speed": 1 }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

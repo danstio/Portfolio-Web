@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Garrido | Bot Developer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Agregado para el dark mode -->
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #f5f5f5;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    header {
+      background-image: url('img/fondo_daniel_garrido.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 100px 30px 60px;
+      color: #fff;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      position: relative;
+      text-align: center;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .header-text {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      text-shadow: 0 0 10px #00ffe7;
+    }
+
+    .btn-proyectos {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #fff;
+      background: #00ffe7;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      box-shadow: 0 0 10px #00ffe7;
+    }
+
+    .btn-proyectos:hover {
+      background: #00ccbb;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffe7;
+    }
+
+    .skills, .testimonials, .stats, .why-choose {
+      text-align: center;
+      margin: 60px auto;
+      max-width: 800px;
+    }
+
+    .skills img {
+      width: 60px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+
+    .skills img:hover {
+      transform: scale(1.2);
+    }
+
+    .stats p, .testimonials p {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .why-choose ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .why-choose li {
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+
+    .dark-mode {
+      background: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif; /* Fuente diferente para el dark mode */
+    }
+
+    .toggle-dark {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background: #00ffe7;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .easter-egg {
+      font-size: 1.2em;
+      margin-top: 20px;
+      padding: 10px;
+      background: #00ffe7;
+      color: #000;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .easter-egg:hover {
+      background: #00ccbb;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffe7;
+    }
+
+    .console {
+      display: none;
+      background: #222;
+      color: #00ffe7;
+      padding: 10px;
+      font-family: monospace;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    /* Estilos para la organización de las secciones */
+    .section-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .section-wrapper > section {
+      flex: 1;
+      min-width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+<button class="toggle-dark" onclick="toggleDarkMode()">Dark Mode</button>
+
+<header>
+    <div class="header-content">
+      <div class="header-text">
+        <h1 class="typing-animation">Daniel Garrido</h1>
+        <p>Developer de Bots Discord | Node.js | HTML | Más de 4 años de experiencia</p>
+        <a href="proyecto.html" class="btn-proyectos">Proyectos</a>
+      </div>
+    </div>
+</header>
+
+<section class="skills">
+  <h2>Habilidades</h2>
+  <img src="img/nodejs.png" alt="Node.js">
+  <img src="img/javascript.png" alt="JavaScript">
+  <img src="img/html.png" alt="HTML">
+  <img src="img/mysql.png" alt="MySQL">
+</section>
+
+<!-- Sección de "Casos de Éxito" y "¿Por qué Elegirme?" organizados -->
+<div class="section-wrapper">
+  <section class="stats">
+    <h2>Casos de Éxito</h2>
+    <p>🚀 +50 bots creados</p>
+    <p>👥 +1000 servidores usan mis bots</p>
+    <p>⭐ 98% satisfacción de clientes</p>
+  </section>
+
+  <section class="why-choose">
+    <h2>¿Por qué Elegirme?</h2>
+    <ul>
+      <li>⚡ Rapidez en el desarrollo de bots.</li>
+      <li>🔒 Alta seguridad y fiabilidad.</li>
+      <li>🎨 Totalmente personalizables según tus necesidades.</li>
+      <li>📞 Soporte continuo y mantenimiento post-lanzamiento.</li>
+    </ul>
+  </section>
+</div>
+
+<section class="testimonials">
+  <h2>Testimonios</h2>
+  <p>💬"Daniel creó un bot increíble para nuestro servidor, muy recomendable." - Spain RP (Almi)</p>
+  <p>💬"Trabajar con Daniel fue increíble, entiende perfectamente lo que necesitas y lo implementa de manera rápida y eficiente." - Barcelona RP (Habbibi)</p>
+  <p>💬"Muy profesional y atento a los detalles. El bot que desarrolló para nuestro servidor tiene integración web y funciona de maravilla." — New York RP (Javier)</p>
+  <p>💬"Nunca habíamos tenido un bot tan completo y estable. Daniel superó nuestras expectativas con su trabajo." — Atlántica Virtual (Aduen)</p>
+  <p>💬"Lo que más me sorprendió fue la velocidad y la calidad del código. Sin duda, volveremos a trabajar con él." — Málaga Spanish (Jesús)</p>
+  <p>💬"Nos entregó un bot altamente funcional con comandos personalizados. Siempre disponible para mejorar y optimizar." — Clientes ShieldVerify</p>
+</section>
+
+<!-- Easter Egg Section -->
+<section class="easter-egg-section">
+  <button class="easter-egg" onclick="showConsole()">Probar mi código</button>
+  <div class="console" id="console">
+    <p>👨‍💻 ¡Hola! Soy tu bot, ejecutando comandos...</p>
+    <p>console.log('¡Bienvenido a mi portafolio!');</p>
+    <p>console.log('Desarrollando bots de alta calidad...');</p>
+  </div>
+</section>
+
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+    "color": { "value": "#ffffff" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5, "random": true },
+    "size": { "value": 3, "random": true },
+    "move": { "enable": true, "speed": 1 }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": { "enable": true, "mode": "repulse" },
+      "onclick": { "enable": true, "mode": "push" }
+    }
+  }
+});
+
+ScrollReveal().reveal('.header-text', { delay: 500, origin: 'top', distance: '50px', duration: 1000 });
+ScrollReveal().reveal('.skills', { delay: 700, origin: 'bottom', distance: '50px', duration: 1000 });
+ScrollReveal().reveal('.stats', { delay: 900, origin: 'bottom', distance: '50px', duration: 1000 });
+ScrollReveal().reveal('.why-choose', { delay: 1100, origin: 'bottom', distance: '50px', duration: 1000 });
+ScrollReveal().reveal('.testimonials', { delay: 1300, origin: 'bottom', distance: '50px', duration: 1000 });
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+
+function showConsole() {
+  const consoleDiv = document.getElementById("console");
+  consoleDiv.style.display = consoleDiv.style.display === "none" ? "block" : "none";
+}
+</script>
+
+</body>
+</html>
